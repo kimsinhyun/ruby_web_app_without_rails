@@ -1,10 +1,15 @@
 require 'logger'
+require 'zeitwerk'
 require_relative './config/routes'
 
 class App
-
   def initialize
     @logger = Logger.new('log/development.log')
+
+    loader = Zeitwerk::Loader.new
+    loader.push_dir('controllers')
+    loader.push_dir('models')
+    loader.setup
   end
 
   def call(env)
