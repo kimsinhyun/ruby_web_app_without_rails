@@ -10,4 +10,6 @@ Router.draw do
 
   get('/welcome') { '<h1>Welcome to Weby</h1>' }
   get('/goodbye') { '<h1>Goodbye from Weby</h1>' }
+
+  get '/articles/index'
 end
