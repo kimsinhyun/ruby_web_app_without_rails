@@ -4,10 +4,12 @@ require_relative 'application_controller'
 
 class ArticlesController < ApplicationController
   def index
+    raise 'Stack Overflow!'
+
     # '<h2>Articles#index</h2>'
     # index_file = File.join(Dir.pwd, 'views', 'index.html')
     # File.read(index_file)
-    @title = "MoriDDang"
-    @tagline = "Ruby Web App without Rails"
+    @title = 'MoriDDang'
+    @tagline = 'Ruby Web App without Rails'
   end
 end
