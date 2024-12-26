@@ -6,7 +6,7 @@ require_relative 'app'
 app = Rack::Builder.new do
   use Rack::ShowExceptions
   use Rack::Reloader, 0
-  use Rack::CommonLogger
+  # use Rack::CommonLogger
   use Rack::Static, urls: ['/public']
   # use Rack::Lint
 
