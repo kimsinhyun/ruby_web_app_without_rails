@@ -28,6 +28,8 @@ class Router
                         controller_class = Object.const_get("#{controller_name.capitalize}Controller")
                         controller = controller_class.new(env)
                         controller.send(action_name)
+
+                        controller.render("views/#{controller_name}/#{action_name}.html.erb")
                       end
                     end
   end
